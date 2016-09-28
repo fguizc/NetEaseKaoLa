@@ -1,0 +1,96 @@
+@import "main.scss";
+$infoColor : #999;
+$mainColor : #333;
+$switchColor:#4cb5ff;
+$testColor : #a1d1f6;
+$btnColor  : rgb(202, 82, 82);
+$btnClickColor : #ca5252;
+body{background-color: #efefef;
+    font-family: "Microsoft YaHei", 微软雅黑, 宋体, helvetica, "Hiragino Sans GB";}
+.hd-logoBox{width: 100%;
+  height: 6.5rem;
+  .hd-wrap{width: 50rem;margin: 0 auto;height: 100%;display: flex;
+    align-items: center;text-align-last: right;
+    justify-content: space-between;
+    .logo{background: url(../img/sprite3.png) no-repeat -47px -20px;
+          width: 180px;height: 50px;}
+    .toSign{
+      font-size: .9rem;
+      color: rgba(102 , 102 , 102 , 1);
+      a{color:$hoverColor;
+        &:hover{color:#ca5252;}}}}}
+
+.m-login{width: 50rem;height: 41.75rem;background-color: #fff;
+        border-radius: .25px;margin: 0 auto;
+        box-shadow: 0 2px 2px 1px #ccc;
+  .login-tit{font-size: 1.2rem;color: #ca5252;font-weight: normal;margin: 0;
+             padding: 2.2rem 0 0 3.5rem;}
+  .login-content{margin-top: 2rem;height: 31rem;
+    form{
+      >div{label{width: 34%;
+           display: inline-block;
+           text-align: right;
+           font-size: .8rem;
+           color: #333;}}
+      div+div{margin-top: 1rem;}
+      .test-code{>div{width: 16rem;height: 1.6rem;display: inline-block;
+                      vertical-align: middle;
+                      background-color: #f9f9f9;
+                      border-radius: .85rem;
+                      position: relative;
+                      overflow: hidden;
+                      border: 1px solid #ccc;
+                      img{position: absolute;
+                      left: 1px;
+                        &:hover{cursor: pointer;}}
+                      span{position: absolute;
+                      right: 30%;
+                      color: #999;
+                      top: 50%;
+                      transform: translateY(-50%)}}}
+      .phone-help{margin-top: 3px;}
+      .user-count{input{width: 10rem;height:2.1rem;margin-right: .5rem}
+                  select{height: 2.1rem;width: 5.3rem;}}
+      .user-password,
+      .user-confirm-pass,
+      .user-phone{input{width: 320px;height: 2.2rem;}}
+      .switch-internation-num,
+      .phone-help,
+      .btn-login,
+      .login-info{margin-left: 34%;}
+      .msg-test-code{input{width: 9.5rem;height: 2.2rem;margin-right: .4rem;}
+                     button{width: 6rem;height: 2.2rem;vertical-align: top;}}
+      .btn-login{button{width: 16rem;height: 2.2rem;font-size: 1rem;}}
+    }
+  }
+}
+
+button{border: none;color: #fff;}
+input,button,select,option{outline: none;font-family: '微软雅黑';}
+select{border-color: #e2e2e2;}
+input{padding: 0;
+      border-width: 1px;
+      border-color: #e2e2e2;
+      border-style: solid;
+      font-size: .8rem;
+      padding-left: .3rem;
+      box-sizing: border-box;
+  &:focus{border-color: $switchColor;}}
+.switch-internation-num{a{color: $switchColor}}
+.phone-help{span{color: $infoColor}}
+.msg-test-code{button{background-color: $testColor;opacity: .6;font: .8rem;}}
+.btn-login{button{background-color: $btnColor;opacity: .6}}
+.login-info{color: #b1b1b1;width: 16rem;
+  a{color: currentColor;&:hover{color: #666;}}}
+
+.ft-aboutNe{width: 100%;
+            height: 2rem;
+            text-align: center;
+            padding: 1.5rem 0;
+  ul{display: flex;
+    width: 37rem;
+    margin: 0 auto .5rem;;
+    color: #b1b1b1;
+    li{flex:1;color: currentColor;
+      &:hover{color: #ee8c18;cursor: pointer}}}
+  span{color: #b1b1b1;}}

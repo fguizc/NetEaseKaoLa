@@ -1,0 +1,73 @@
+@import "main.scss";
+h2{margin-bottom: 0;margin-right: .5rem;display: inline-block;
+  &+span{vertical-align: bottom;}}
+ul{padding-left: 0}
+figure{margin: 0}
+.hd-index{width:100%;
+  .hd-index-wrap{margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .hd-kaolaLogo{flex:2}
+    .hd-step{flex: 1;text-align: center;
+      .step-img{background: url(../img/steps.png) no-repeat center top ;
+                display: inline-block;height: 12px;width: 400px}
+      .step-txt{display: flex;
+        padding: 0;
+        margin: .5rem auto 0;
+        width: 400px;
+        li{flex:1}}}}}
+
+.m-cart{
+  .m-cart-wrap{
+    .cart-empty{
+      padding-top: 7.5rem;
+      text-align: center;
+      height: 7.5rem;
+      .empty-txt{vertical-align: top;
+        display: inline-block;
+        text-align-last: left;
+        span:first-child{display: block}
+        span{font-size: .8rem;
+          a{color:$hoverColor;
+            &:hover{text-decoration: underline;}}}}
+    }
+    .cart-exist{
+      .mycart{}
+      .guess{width: 100%;}
+    }
+  }
+}
+
+
+/*当存在商品时的购物车主界面*/
+.cart-exist>div:not(:first-child){
+  margin-bottom: 1rem;
+  >div{width: 85.15625%;margin: 0 auto;}}
+.cart-exist>div:last-child{margin-bottom: 5rem;}
+.currentPage-goods-tit{width: 100%;}
+figure{border: 1px solid #e2e2e2;width: 204px;
+  >img{display: inline-block;
+       width: 204px;height: 204px;}
+  >figcaption{width: 204px;
+    >.text-hide{@include texthide;}
+    >p{padding:0 15px;}}
+  }
+.ul-flex{display: flex;
+  >li{flex: 1;}}
+.goods-info{margin-bottom: .3rem;
+  &+p{margin-top: .3rem;}}
+.goods-price{margin: 0;
+  &+p{margin: 0 0 15px 0;}}
+.notice-keyword{color:$hoverColor;}
+  // .goods-name{@include texthide;}
+.current-price{font-size: .8rem;font-weight: bold;
+  &+span{vertical-align: bottom;text-decoration: line-through;
+         color: #999;font-size: .6rem;}}
+
+.allbuy-goods-info{display: inline-block;width: 175px;}
+
+
+
+/* footer */
+.ft-Wrap{height: 127px;}

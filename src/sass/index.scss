@@ -1,0 +1,414 @@
+//块级元素的水平居中
+@import "main.scss";
+
+@mixin font-face {
+
+}
+
+$borderbox: border-box;
+
+/*=========================顶部nav导航========================*/
+.hd-NavBg{width: 100%;height: 1.5rem;background-color: #f2f2f2;
+          position: absolute;top: 0;z-index: -1;}
+.hd-NavTop{
+  @include centerWidth;
+  height: 1.5rem;
+  background-clip: border-box;
+  .hd-NavTopL1,.hd-NavTopL2{
+    float: left;
+    line-height: 1.5rem;}
+  .hd-NavTopL1{
+    a:first-child{margin-left: .8rem;padding-right: .25rem;}
+    a:last-child{padding-left: .25rem;}
+    }
+  .hd-NavTopL2{
+    margin-left: 1.5rem;
+    position: relative;
+    &:hover span{display: block}
+    i{display: inline-block;}
+    >a>span{position: absolute;
+         top:1.75rem;
+         left: -.75rem;
+         text-align: center;
+         padding: .25rem .25rem .05rem;
+         border: .05rem solid #dedede;
+         display: none;
+         z-index: 2;
+         background-color: #fff;
+         line-height: 1rem;
+         >strong{color:$hoverColor;}
+         >span{border: .5rem solid #dedede;
+                      border-color:transparent transparent #dedede transparent;
+                      width: 0;height: 0;padding: 0;
+                      position: absolute;
+                      top: -1rem;
+                      left: 50%;
+                      transform: translateX(-50%);}
+        >.arrowToTop2{border-width: .45rem;
+                      border-color: transparent transparent #fff transparent;
+                      top: -.85rem;}}
+  }
+  .small-arrow{border: 4px solid #333;
+               height: 0;width: 0;display: inline-block;
+               border-bottom-color: transparent;
+               border-left-color: transparent;
+               border-right-color: transparent;
+               position: relative;
+               bottom: 0;
+               left: 2px;}
+  .hd-NavTopR1{
+    float: right;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    .have-list{
+      position: relative;
+      box-sizing: border-box;
+      >a>i{transition: transform .2s ease-in}
+      &:hover{background: #fff;
+        border: 1px solid #afafaf;
+        border-top-width: 0;
+        box-sizing: border-box;
+        z-index: 3;
+        >span{color:#fff;}
+        >div{display: block;}
+        >a>i{transform:rotate(180deg)}}
+    }
+    li{float: left;
+       line-height: 1.5rem;
+       box-sizing: border-box;
+      //  padding: 0 .4rem 0 .4rem;
+       >a{padding: 0 .8rem}
+       >div{display: none;
+            position: absolute;
+            left: -1px;
+            top: 29px;
+            z-index: 3;
+            background-color: #fff;
+            width: 4rem;
+            padding-left: .8rem;
+            padding-right: .7rem;
+            border: 1px solid #afafaf;
+            border-top-width: 0;
+         >a{display: block;}}}
+  }
+}
+
+/*=========================网易考拉LOGO 搜索框  购物车icon==========*/
+.hd-index{width: 100%;height: 5rem;}
+.hd-index-wrap{
+  @include centerWidth;
+  background-color: #fff;
+  padding-top: 1.5rem;
+  height: 5rem;
+  box-sizing: $borderbox;
+  position: relative;
+  .hd-kaolaLogo{
+    float: left;}
+  .hd-searchBox{
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%);
+    .hd-searchTop{background-color: #333;
+      .searchIpt{position: relative;top:3px;left: 3px;
+        i{display: inline-block;width: 14px;height: 14px;
+          top: 8px;left: 9px;
+          background: url(../img/sprite.png) no-repeat -468px -668px;
+          position: absolute;}
+        input{border: none;outline: none;}
+      }
+      .searchBigIcon{background: url(../img/sprite.png) no-repeat -489px -658px;}
+    }
+  }
+  .hd-shopCart{
+    float: right;
+    width: 5.5rem;
+    height: 1.8rem;
+    text-align: center;
+    line-height: 1.8rem;
+    border: 0.05rem solid #ddd;
+    border-radius: .25rem;
+    i,span{display: inline-block;}
+    span{padding-left: .3rem;}
+  }
+}
+
+.hd-searchBox{
+  .hd-searchTop{width: 25.55rem;
+                height: 1.8rem;
+                >div:not(:last-child){display: inline-block;vertical-align: top;}
+                .searchIpt{width: 89%;height: 82%;background-color: #fff;
+                           input{width: 100%;height: 100%;
+                                 box-sizing: $borderbox;
+                                 padding-left: 1.5rem;}}
+                .searchBigIcon{width: 10%;height: 100%;background-color: red;}}
+  .hd-searchBottom{
+    padding: 0;
+    li{float: left;}
+    li>a{padding: 0 .5rem;
+        &:hover{text-decoration: underline;
+                color:$defaultFontColor}}
+    li:first-child>a{padding-left: 0;}
+  }
+}
+/*======================顶部NavTab页==========================*/
+.hd-NavTab{
+  width: 100%;
+  .topTab{@include centerWidth;
+          height: 2.1rem;
+          .allSortGoods{float: left;
+                        width: 8rem;
+                        height: 2rem;
+                        text-align: center;
+                        background-color: #333;
+                        color: #fff;
+            .topLevel{
+              .hideIcon{display: inline-block;
+                        vertical-align: middle;
+                i{width: .75rem;
+                  height: 0;
+                  border-top: 2px solid #ddd;
+                  display: block;
+                  margin-bottom: .15rem;}}
+              >span{font-size: .7rem;line-height: 2.1rem;}
+              >ul{display: flex;height: 20.05rem;
+                  @include clearMP;
+                  flex-direction: column;
+                  margin-top: -.1rem;
+                  position: relative;
+                  z-index: 5;
+                li{@include flexCenter;
+                   cursor: pointer;
+                   width: 8rem;
+                   flex: 1;
+                   font-size: .7rem;
+                   background-color: rgba(15,15,15,.72);
+                   box-sizing: $borderbox;
+                   padding-left: .2rem;
+                   &:hover{background-color:rgba(54, 54, 54 ,.6);
+                           border-left: .2rem solid #e31436;
+                           padding-left: 0}
+                 a{color: #fff;
+                  &:hover{color: #fff;}}}}}}
+          .funcTab{
+            padding-left: 1rem;
+            float: left;
+            li{float: left;
+               padding: 0 1rem;
+             a{font-weight: bold;
+               color: #333;
+               font-size: .7rem;
+               &:hover{color: $hoverColor}}}}}
+}
+
+  .hotkey{color: $hoverColor}
+/*=====================网易考拉indexPage================*/
+.main-Wrap{height: 100rem;width: 100%;overflow: hidden;background-color: #f6f6f6;
+  .m-bannerBox{height: 20.05rem;
+               @include centerWidth;
+               width: 96rem;
+               overflow: hidden;
+    ul{@include clearMP;
+      overflow: hidden;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      li{
+        img{height: 20rem;width: 96rem;}
+      }
+    }
+  }
+  .m-sellpoint{
+    width: 100%;
+    border-bottom: .1rem solid #e2e2e2;
+    background-color: #fff;
+    .sellpoint-Wrap{
+      @include centerWidth;
+      .sellpointL{float: left;
+        a{float: left;height: 2.25rem;color:#999;
+          margin-right: .5rem;
+          &:hover{color:$hoverColor;}}}
+      .notice{float: right;
+        a{color: $hoverColor;}}
+      div>a{font-size: .8rem;line-height: 2.25rem;}
+    }
+  }
+  .m-promotions{padding: 1rem 0 2rem;width: 100%;
+                position: relative;
+    >ul:first-child{@include centerWidth;
+      text-align: center;
+      display: flex;
+      li{flex:1;}}
+    .indexLeft,.indexRight{margin-top: 1rem;}
+    .indexLeft{position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #fff;
+          background-clip: content-box;
+          border: 1px solid #d2d2d2;
+          border-top-width: 0;
+      a{display: inline-block;
+        width: 5.5rem;
+        img{width: 100%;height: 100%;}}
+      ul{@include clearMP;text-align: center}
+      ul:nth-of-type(1){li{border-top: .05rem solid #ddd;
+                           padding: .4rem 0;
+                           font-size: .8rem;
+                           cursor: pointer;
+                           &:hover{color: $hoverColor;
+                                   background-color: rgba(242, 242, 242 ,.6)}}
+                         li:last-child{border-bottom: .05rem solid #ddd}}
+      ul:nth-of-type(2){border-bottom: 1px solid #d2d2d2;
+        li{padding: .3rem 0 ;
+          &:hover{color: $hoverColor;cursor: pointer;
+            background-color: rgba(242, 242, 242 ,.6)}}}
+      a:last-child{font-size: 0;display: inline-block;img{display: block;}}}
+    .indexRight{position: absolute;
+          top: 0;
+          right: .5rem;
+          height: 13rem;text-align: center;
+          ul{height: 80%;
+            display: flex;
+            flex-direction: column;
+             @include clearMP;
+             li{padding: .4rem .7rem ;
+                flex:1;
+                text-align: center;
+                background-color: #fff;
+                }
+             li:not(:nth-of-type(3)){border-bottom: 1px solid #e2e2e2;}}
+          a{height:  20%;
+            text-align: center;
+            display: block;
+            line-height: 100%;
+            color: #fff;
+            background-color: #888;}
+      }
+    }
+  .m-newgoods{width: 100%;
+    .newgoods-Wrap{@include centerWidth;
+      .goodstit{padding-left: 2rem;position: relative;
+        .tit{float: left;
+          em{font-size: 1.3rem;
+             color: #333;
+             padding-right: .6rem;}
+          span{font-size: .6rem;}}
+        .enterNewChannel{position: absolute;bottom: 2px;right: 0;
+          color: #333;font-size: .7rem;
+          &:hover{text-decoration: underline;
+                  cursor: pointer;}}
+      }
+      .goodsrecommend{ul{background-color: #fff;
+                        padding-left: 0;
+                        margin-left: 1rem;
+                        display: flex;
+                        li{padding: 1rem .4rem;
+                           flex: 1;
+                           text-align: center;
+                          a{}
+                          .goodsinfo{height: 6rem;display: inline-block;
+                                     position: relative;
+                            .goodsname{font-size: .6rem;color:#333;margin: 0;}
+                            .goodseffect{color: #333;display: block}
+                            .discount-true{padding: .1rem;
+                              color: $hoverColor;
+                              border: 1px dotted $hoverColor;
+                              display: inline-block;}
+                            .price{position: absolute;
+                                   bottom:10px;
+                                   left: 0;
+                                   margin: 0;
+                              .discount-price{color: $hoverColor;
+                                              font-size: .8rem;
+                                              font-weight: bold;
+                                              padding-right: .3rem;}
+                              .orig-price{color: $defaultFontColor;
+                                          text-decoration: line-through;}
+                            }
+                          }
+      }}}
+    }
+  }
+}
+/*=====================网易考拉footer===================*/
+.ft-Wrap{
+  width: 100%;
+  height: 25.55rem;
+  .ft-aboutKLa{
+    @include centerWidth;
+    height: 19.2rem;
+    .btmList{
+      padding-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-top: 1px solid #e2e2e2;
+      ul{display: flex;
+         margin-top: 0;
+        li{flex:1;
+          strong,span{display: block;}
+          strong{font-size: .8rem;
+                 font-weight: bold;
+                 line-height: 1.3rem;}}}
+    }}
+  .ft-aboutNE{
+    height: 6.35rem;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    div:not(:last-child){
+      padding: .3rem 0;}
+    div:nth-of-type(2)>i>img{vertical-align: top;}
+    div>span{color:#c2c2c2;}
+    div>a{color:#c2c2c2;
+      &:hover{text-decoration: underline;}}}
+}
+
+.btmList>ul>li>i{width: 2.2rem;height: 2.2rem;
+                 float: left;
+                 margin-right: .5rem;
+                 background-image: url(../img/sprite.png);
+                 background-repeat: no-repeat;}
+.btmList>ul>li:nth-of-type(1)>i{background-position: -37.55rem 0;}
+.btmList>ul>li:nth-of-type(2)>i{background-position: -37.55rem-3.05rem 0;}
+.btmList>ul>li:nth-of-type(3)>i{background-position: -37.55rem-6.10rem 0;}
+.btmList>ul>li:nth-of-type(4)>i{background-position: -37.55rem-9.15rem 0;}
+.followUs>img{display: block;}
+.guideList{padding-top: 1rem;border-top:1px solid #e2e2e2;}
+.guideList>ul>li>dl{dt{font-size: .8rem;
+                       font-weight: bold;
+                       margin-bottom: .5rem;
+                     }
+                     dd:not(:last-child){
+                       margin-bottom: .5rem;
+                     }}
+.guideList>ul>li:first-child{padding-left: 0;
+                             border-left: none;
+  span{display: inline-block;
+       margin-top: 1rem;
+      i{background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: .5rem;
+        vertical-align: middle;
+        &:hover{cursor: pointer;}}
+      i:nth-of-type(1){background-position: -37.6rem -3.45rem;
+        &:hover{background-position: -37.6rem -3.45rem-2rem;}}
+      i:nth-of-type(2){background-position: -37.6rem-2.2rem -3.45rem;
+        &:hover{background-position: -37.6rem-2.2rem -3.45rem-2rem;}}
+      i:nth-of-type(3){background-position: -37.6rem-4.4rem -3.45rem;
+        &:hover{background-position: -37.6-4.4rem -3.45rem-2rem}}}}
+.guideList>ul>li{float: left;
+                 padding: 0 1.4rem 0 1.2rem;
+                 border-left: .05rem solid #e2e2e2;
+                 &:nth-of-type(2){height: 6.85rem;}
+                 dl{margin-top: 0;
+                   dd{color: #333;
+                    &:hover{text-decoration: underline;cursor: pointer;}}}}
+.guideList>ul>li:last-child{text-align: center;
+                            padding-left: 1.6rem;
+                            border-left: none;
+                            img{display: block;
+                                padding: .2rem;
+                                margin-bottom: .2rem;
+                                border: .05rem solid #d2d2d2;}}

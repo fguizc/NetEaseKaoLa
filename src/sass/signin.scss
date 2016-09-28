@@ -1,0 +1,139 @@
+@import "main.scss";
+/*考拉海淘登录页——头部*/
+.hd-sign{width: 100%;
+  .hd-activeBanner{position: relative;
+                   width: 100%;
+                   height: 5rem;
+                   margin: 0 auto;
+    img{display: block;
+        width: 96rem;
+        height: 5rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);}
+    a{display: block;
+      position: absolute;
+      width: 6rem;
+      height: 5rem;
+      right: 12.25%;}}
+  .hd-sign-sellpoint{@include centerWidth;
+    width: 50rem;
+    height: 5rem;
+    position: relative;
+    .kaolaLogo{height: 2.6rem;
+               width: 11.5rem;
+               @include abcenter;
+               left: 5%;
+               top: 55%;
+               transform: translate3d(0,-50%,0);
+               background-image: url(../img/kaolaLogo.png);
+               background-position: center top;
+               background-repeat: no-repeat;}
+    .sellpoint{height: 5rem;
+               width: 25.2rem;
+               @include abcenter;
+               transform: translate3d(0,-50%,0);
+               background-image: url(../img/143391c6aefd48caa11acca6b03883b8.png);
+               background-repeat: no-repeat;}}
+  }
+
+/*考拉海淘登录页——正文*/
+@mixin signPadding{padding: 1.35rem 2rem .5rem 2rem ;}
+.ipt-active{border: 1px solid #51B8F1}
+.m-sign{
+  background: url(../img/itjzp9la42_1920_520.jpg) no-repeat ;
+  background-color: #f8f8f8;
+  background-position: center top;
+  margin-bottom: 2rem;
+  height: 26rem;
+  .m-sign-wrap{height: 26rem;
+    @include centerWidth;
+    width: 50rem;
+    position: relative;
+    .active-page{@include abcenter;height: 20rem;width: 20rem;
+      left: 30%;}
+    .sign-form{@include abcenter;left: 50%;transform: translate3d(0,-50%,0);
+      height: 17.7rem;background: #fff;
+      position: relative;
+      display: block;
+      width: 17.5rem;
+      .signBox{float: left;
+        h2{@include signPadding;font-size: .9rem;color:#333;
+           width: 13.5rem;margin: 0;}
+        form{padding-left: 2rem;
+          >div:not(:nth-of-type(3)){width: 13.5rem;height: 1.8rem;border: 1px solid #e2e2e2;
+            input:not([type='checkbox']){padding:0 0 0 6px;height: 36px;width: 186px;border: none;
+                  line-height: 36px;outline: none;}
+            i:nth-of-type(1){float: left;padding:0 9px;width: 16px;height: 34px;
+              background-image: url(../img/ursloginicon.png) ;
+              background-repeat: no-repeat;
+              border-right: 1px solid #e2e2e2;}
+            i:nth-of-type(2){float: right;}
+            .cls-clear{width: 20px;height: 34px;padding: 0 10px;
+              background: url(../img/sprite2.png) no-repeat -137px -82px;
+              display: none;
+              &:hover{cursor: pointer;}}
+          }
+          .usernameBox{.icon-username{background-position: center 9px}}
+          .userpassBox{.icon-password{background-position: center -22px}}
+          >div+div{margin-top: 16px;}
+          button{width: 270px;height: 44px;
+                background-color: $hoverColor;
+                color: #fff;
+                text-align: center;
+                line-height: 44px;
+                border: none;
+            &:hover{background-color: #F5345E;}}
+        }}
+        .toLogin{width: 270px;margin: 0 auto;text-align: center;
+                 height: .8rem; line-height: .8rem;font-size: .6rem;
+                 margin-top: 1rem;
+          span:last-child{color:#51B8F1;
+            &:hover{cursor: pointer;}}}
+        .sign-sns{height: 22px;padding: 10px 26px 10px 29px;
+          border-top: 1px solid #e2e2e2;
+          position: absolute;bottom: 0;
+          span{color: #333;width: 122px;line-height: 22px;}
+          i{background: url(../img/sprite.png) no-repeat;display: inline-block;
+            width: 1rem ;height: 1rem;vertical-align: middle;
+            padding: 0 .5rem;}
+          i:nth-of-type(1){background-position: -38rem -13.8rem;
+            &:hover{background-position: -41.2rem -13.8rem}}
+          i:nth-of-type(2){background-position: -38rem -15rem;
+            &:hover{background-position: -41.2rem -15rem}}
+          i:nth-of-type(3){background-position: -38rem -16.5rem;
+            &:hover{background-position: -41.2rem -16.5rem}}
+          i:nth-of-type(4){background-position: -38rem -17.85rem;
+            &:hover{background-position: -41.2rem -17.85rem}}}
+      .qrcode{position: absolute;
+        border-left: 1px solid #e2e2e2;
+        left: 100%;
+        height: 354px;
+        background-color: #fff;}}}
+  }
+.free-sign{
+  width: 270px;
+  margin-bottom: 1rem;
+  .free-box{float: left;
+    input{vertical-align: middle;}
+    label{color: #999;
+      &:hover{color:#666;cursor: pointer;}}}
+  a{float: right;color: #999;
+    &:hover{color:#666;}}
+}
+/*网易考拉登录页-底部*/
+  footer{width: 100%;height: 4.4rem;margin-bottom: 5rem;
+    ul{@include clearMP;width: 50rem;@include centerWidth;
+       display: flex;
+      li{flex: 1;text-align: center;}}
+    ul:nth-of-type(1){margin-bottom: .4rem;
+      li{font-size: .7rem;color: #666;
+      &:hover{color:#c2c2c2;cursor: pointer;}}}
+    ul:nth-of-type(2){li{font-size: .6rem;color: #999;}
+}}
+.about-Trusted{
+  text-align: center;
+  margin-top: .5rem;
+  img:first-child{width: 84px;margin-right: .5rem;}
+  img:last-child{width: 28px;}
+}

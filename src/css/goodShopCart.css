@@ -1,0 +1,158 @@
+@charset "UTF-8";
+html {
+  font-size: 125%; }
+
+body {
+  font-family: "微软雅黑", Helvetica, Arial, "Hiragino Sans GB";
+  font-size: .6rem;
+  color: #666;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #666;
+  text-decoration: none; }
+  a:hover {
+    color: #e31436; }
+
+ul {
+  list-style: none; }
+
+dd {
+  margin: 0; }
+
+em {
+  font-weight: bold;
+  font-style: normal; }
+
+/*=========================清除浮动================================*/
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: '.';
+  height: 0;
+  overflow: hidden; }
+
+h2 {
+  margin-bottom: 0;
+  margin-right: .5rem;
+  display: inline-block; }
+  h2 + span {
+    vertical-align: bottom; }
+
+ul {
+  padding-left: 0; }
+
+figure {
+  margin: 0; }
+
+.hd-index {
+  width: 100%; }
+  .hd-index .hd-index-wrap {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .hd-index .hd-index-wrap .hd-kaolaLogo {
+      flex: 2; }
+    .hd-index .hd-index-wrap .hd-step {
+      flex: 1;
+      text-align: center; }
+      .hd-index .hd-index-wrap .hd-step .step-img {
+        background: url(../img/steps.png) no-repeat center top;
+        display: inline-block;
+        height: 12px;
+        width: 400px; }
+      .hd-index .hd-index-wrap .hd-step .step-txt {
+        display: flex;
+        padding: 0;
+        margin: .5rem auto 0;
+        width: 400px; }
+        .hd-index .hd-index-wrap .hd-step .step-txt li {
+          flex: 1; }
+
+.m-cart .m-cart-wrap .cart-empty {
+  padding-top: 7.5rem;
+  text-align: center;
+  height: 7.5rem; }
+  .m-cart .m-cart-wrap .cart-empty .empty-txt {
+    vertical-align: top;
+    display: inline-block;
+    text-align-last: left; }
+    .m-cart .m-cart-wrap .cart-empty .empty-txt span:first-child {
+      display: block; }
+    .m-cart .m-cart-wrap .cart-empty .empty-txt span {
+      font-size: .8rem; }
+      .m-cart .m-cart-wrap .cart-empty .empty-txt span a {
+        color: #e31436; }
+        .m-cart .m-cart-wrap .cart-empty .empty-txt span a:hover {
+          text-decoration: underline; }
+.m-cart .m-cart-wrap .cart-exist .guess {
+  width: 100%; }
+
+/*当存在商品时的购物车主界面*/
+.cart-exist > div:not(:first-child) {
+  margin-bottom: 1rem; }
+  .cart-exist > div:not(:first-child) > div {
+    width: 85.15625%;
+    margin: 0 auto; }
+
+.cart-exist > div:last-child {
+  margin-bottom: 5rem; }
+
+.currentPage-goods-tit {
+  width: 100%; }
+
+figure {
+  border: 1px solid #e2e2e2;
+  width: 204px; }
+  figure > img {
+    display: inline-block;
+    width: 204px;
+    height: 204px; }
+  figure > figcaption {
+    width: 204px; }
+    figure > figcaption > .text-hide {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    figure > figcaption > p {
+      padding: 0 15px; }
+
+.ul-flex {
+  display: flex; }
+  .ul-flex > li {
+    flex: 1; }
+
+.goods-info {
+  margin-bottom: .3rem; }
+  .goods-info + p {
+    margin-top: .3rem; }
+
+.goods-price {
+  margin: 0; }
+  .goods-price + p {
+    margin: 0 0 15px 0; }
+
+.notice-keyword {
+  color: #e31436; }
+
+.current-price {
+  font-size: .8rem;
+  font-weight: bold; }
+  .current-price + span {
+    vertical-align: bottom;
+    text-decoration: line-through;
+    color: #999;
+    font-size: .6rem; }
+
+.allbuy-goods-info {
+  display: inline-block;
+  width: 175px; }
+
+/* footer */
+.ft-Wrap {
+  height: 127px; }
+
+/*# sourceMappingURL=goodShopCart.css.map */

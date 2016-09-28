@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>网易用户中心</title>
+  <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/login.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+  <header class="hd-logoBox">
+    <div class="hd-wrap">
+      <div class="logo"></div>
+      <div class="toSign">
+        已有账号？去<a href="signin.html">登录</a>
+      </div>
+    </div>
+  </header>
+  <div class="m-login">
+    <h2 class="login-tit">注册账号</h2>
+    <div class="login-content">
+      <form>
+        <div class="user-count">
+          <label for="user-count">账号：</label>
+          <input type="text" placeholder="6-18位字母数字组合" id="user-count">
+          <select class="user-count-mail-type" name="mail-type">
+            <option value="163"  >@163.com</option>
+            <option value="126"  >@126.com</option>
+            <option value="yeah" >@yeah.net</option>
+          </select>
+        </div>
+        <div class="user-password">
+          <label for="user-pass">密码：</label>
+          <input type="password" placeholder="6-16位密码，区分大小写" id="user-pass">
+        </div>
+        <div class="user-confirm-pass">
+          <label for="user-confirm">确认密码：</label>
+          <input type="password" placeholder="再次输入密码" id="user-confirm">
+        </div>
+        <div class="test-code">
+          <label for="test-code">验证码：</label>
+          <div class="bg-code">
+            <img src="img/slider.png" alt="" />
+            <span>拖动滑块，完成验证</span>
+          </div>
+        </div>
+        <div class="user-phone">
+          <label for="phone-num">手机号：</label>
+          <input type="text" placeholder="11位手机号">
+        </div>
+        <div class="switch-internation-num">
+          <a href="#">切换到国际手机</a>
+        </div>
+        <div class="phone-help">
+          <span>忘记密码时，可通过手机快速找回密码</span>
+        </div>
+        <div class="msg-test-code">
+          <label for="msg-code">短信验证码：</label>
+          <input type="text" placeholder="输入短信验证码">
+          <button type="button" id="btnGetMsgCode">获取验证码</button>
+        </div>
+        <div class="btn-login">
+          <button type="button" id="btnLogin">注&nbsp;&nbsp;册</button>
+        </div>
+        <div class="login-info">
+          用户注册即代表同意
+          <a href="#">《服务条款》</a>
+          和
+          <a href="#">《网络游戏用户隐私保护和个人信息利用政策》</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer class="ft-aboutNe">
+    <ul>
+      <li>About NetEase</li>-
+      <li>公司简介</li>-
+      <li>联系方式</li>-
+      <li>OAuth2.0认证</li>-
+      <li>招聘信息</li>-
+      <li>客户服务</li>-
+      <li>相关法律</li>-
+      <li>网络营销</li>
+    </ul>
+    <span>网易公司版权所有 &copy;1997-2016</span>
+  </footer>
+</body>
+</html>

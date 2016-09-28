@@ -1,0 +1,45 @@
+@mixin centerWidth{
+  width: 85.15625%;
+  margin: 0 auto;}
+@mixin abcenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0);}
+@mixin clearMP{
+    margin: 0;
+    padding: 0;}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+@mixin texthide {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;}
+$font: "微软雅黑",Helvetica,Arial,"Hiragino Sans GB" !default;
+$hoverColor: #e31436;
+$defaultFontColor: #666;
+    html{
+      font-size: 125%;}
+    body{
+      font-family: $font;
+      font-size: .6rem;
+      color: #666;
+      overflow-x: hidden;
+      @include clearMP;}
+    a{
+      &:hover{color:$hoverColor};
+      color: $defaultFontColor;
+      text-decoration: none;}
+    ul{list-style: none;}
+    dd{margin: 0;}
+    em{font-weight: bold;
+       font-style: normal;}
+/*=========================清除浮动================================*/
+       .clearfix:after{
+         display: block;
+         clear: both;
+         content: '.';
+         height: 0;
+         overflow: hidden;}

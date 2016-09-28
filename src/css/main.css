@@ -1,0 +1,37 @@
+@charset "UTF-8";
+html {
+  font-size: 125%; }
+
+body {
+  font-family: "微软雅黑", Helvetica, Arial, "Hiragino Sans GB";
+  font-size: .6rem;
+  color: #666;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #666;
+  text-decoration: none; }
+  a:hover {
+    color: #e31436; }
+
+ul {
+  list-style: none; }
+
+dd {
+  margin: 0; }
+
+em {
+  font-weight: bold;
+  font-style: normal; }
+
+/*=========================清除浮动================================*/
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: '.';
+  height: 0;
+  overflow: hidden; }
+
+/*# sourceMappingURL=main.css.map */
