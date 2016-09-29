@@ -13,6 +13,7 @@
   6. favicon.ico 文件用于网页的ico应用
   7. humans.txt  文件用于记录项目过程中开发人员相关
   8. robots.txt  文件用于优化SEO
-  9  .html 文件用于项目的各个页面
+  9. html 文件用于项目的各个页面
+  10. demo 文件夹存放一些不确定的demo
 - CHANGLOG.md 文件主要用于记录更改日志
 - README.md 文件主要用于记录项目简介
