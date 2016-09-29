@@ -90,7 +90,134 @@
         </div>
       </div>
       <div class="cart-exist">
-        <div class="mycart"></div>
+        <div class="mycartBox">
+          <div class="mycart-short-info">
+            <div class="mycart-btn-allselect">
+              <input type="checkbox" name="name" value="" id="btn-allselect" class="new-checkbox">
+              <label for="btn-allselect">全选</label>
+            </div>
+            <div class="mycart-goods-info">商品信息</div>
+            <div class="mycart-goods-unit-price ">单价（元）</div>
+            <div class="mycart-goods-num centerX">数量</div>
+            <div class="mycart-goods-cost centerX">金额（元）</div>
+            <div class="mycart-goods-behavior">操作</div>
+          </div>
+          <div class="mycart">
+            <div class="location-send">
+              <input type="checkbox" class="new-checkbox">
+              <h2>XX保税仓发货</h2>
+            </div>
+            <div class="goods">
+              <div class="show-goods">
+                <div class="current-active">
+                  <div class="active-pic notice-keyword centerX" id="nowActiveName">XXX活动</div>
+                  <div class="active-des">
+                    <p>再购<span class="notice-keyword active-goods-num">X</span>件立享【<span class="active-name">活动名</span>】</p>
+                    <a href="index.html">去凑单&gt;</a>
+                  </div>
+                </div>
+                <ul class="your-cart-goods">
+                  <li class="goods-item">
+                    <div class="col col1">
+                      <input type="checkbox" name="name" value="" class="new-checkbox">
+                    </div>
+                    <div class="col col2">
+                      <img src="" alt="">
+                      <div class="current-goods-info">
+                        <div class="current-goods-name">你猜我叫什么名字</div>
+                        <div class="current-goods-type">种类：你猜我是什么颜色</div>
+                        <div class="current-goods-tax">税费：买东西还要税呀</div>
+                      </div>
+                    </div>
+                    <div class="col col3">
+                      <p class="old-price">100</p>
+                      <p class="new-price">20</p>
+                    </div>
+                    <div class="col col4">
+                      <button class="reduce-goods-num">-</button>
+                      <input type="text" class="this-goods-num" value="1">
+                      <button class="increase-goods-num">+</button>
+                    </div>
+                    <div class="col col5">
+                      <p class="current-goods-total-price"></p>
+                    </div>
+                    <div class="col col6">
+                      <p class="delete-this" id="deleteThisLi">删除</p>
+                      <p class="collect-this">移入我的收藏</p>
+                    </div>
+                    <div class="vine-line"></div>
+                  </li>
+                  <li class="goods-item">
+                    <div class="col col1">
+                      <input type="checkbox" name="name" value="" class="new-checkbox">
+                    </div>
+                    <div class="col col2">
+                      <img src="" alt="">
+                      <div class="current-goods-info">
+                        <div class="current-goods-name">你猜我叫什么名字</div>
+                        <div class="current-goods-type">种类：你猜我是什么颜色</div>
+                        <div class="current-goods-tax">税费：买东西还要税呀</div>
+                      </div>
+                    </div>
+                    <div class="col col3">
+                      <p class="old-price">100</p>
+                      <p class="new-price">20</p>
+                    </div>
+                    <div class="col col4">
+                      <button class="reduce-goods-num">-</button>
+                      <input type="text" class="this-goods-num" value="1">
+                      <button class="increase-goods-num">+</button>
+                    </div>
+                    <div class="col col5">
+                      <p class="current-goods-total-price"></p>
+                    </div>
+                    <div class="col col6">
+                      <p class="delete-this" id="deleteThisLi">删除</p>
+                      <p class="collect-this">移入我的收藏</p>
+                    </div>
+                    <div class="vine-line"></div>
+                  </li>
+                </ul>
+                <div class="tax-rule">
+                  <div class="tax-content">
+                    <div class="content-wrap">
+                      <p class="compute-rule notice-keyword">
+                        税费 = 购买单价 * 件数 * 税率
+                      </p>
+                      <p class="tax-info">
+                        据国家政策规定，本品适用于跨境综合税：11.9%
+                        实际结算税费请以提交订单时的税费明细为准
+                      </p>
+                    </div>
+                  </div>
+                  <div class="tax-triangle"></div>
+                </div>
+              </div>
+              <div class="cartinfo"></div>
+            </div>
+          </div>
+          <div class="totalbox">
+            <div class="totalLeft">
+              <div class="btn-selectall">
+                <input type="checkbox" id="btn-total-selectall" class="new-checkbox">
+                <label for="btn-total-selectall">全选</label>
+              </div>
+              <div class="btn-deleteSelect">
+                <a href="#" id="btn-total-deleteSelect">删除选中商品</a>
+              </div>
+            </div>
+            <div class="totalRight">
+              <div class="total-right-txt">
+                <p>已选商品 <span class="selected-goods-num notice-keyword">0</span> 件
+                   总价(不含运费)：<span class="currency notice-keyword">￥</span><span class="total-goods-money notice-keyword">0.00</span></p>
+                <p>活动优惠：-￥<span class="total-goods-saved">0.00</span>
+                   商品应付总计：￥<span class="total-goods-cost">0.00</span>
+                   商品税费：￥<span class="total-goods-tax">0.00</span></p>
+              </div>
+              <button class="btn-pay" id="btn-total-pay">去结算</button>
+            </div>
+          </div>
+        </div>
         <div class="guess">
           <div class="guess-wrap">
             <div class="guess-tit currentPage-goods-tit">
@@ -221,5 +348,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/vendor/jquery-3.1.0.min.js" charset="utf-8"></script>
+  <script src="js/goodShopCart.js" charset="utf-8"></script>
 </body>
 </html>

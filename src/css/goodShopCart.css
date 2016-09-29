@@ -92,6 +92,257 @@ figure {
   width: 100%; }
 
 /*当存在商品时的购物车主界面*/
+.cart-exist .mycartBox .mycart .location-send > input {
+  vertical-align: bottom; }
+
+.goods .show-goods .current-active {
+  position: relative;
+  padding-top: .5rem; }
+  .goods .show-goods .current-active .active-pic {
+    position: absolute;
+    left: -1px;
+    background: url(../img/manjianIcons.png) no-repeat -10px -10px;
+    width: 68px;
+    height: 30px;
+    line-height: 30px;
+    font-size: .7rem; }
+  .goods .show-goods .current-active .active-des {
+    height: 1.5rem;
+    padding-left: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start; }
+    .goods .show-goods .current-active .active-des > p {
+      color: #999;
+      font-size: .7rem; }
+    .goods .show-goods .current-active .active-des > a {
+      color: #51bbf1;
+      font-size: .7rem; }
+      .goods .show-goods .current-active .active-des > a:hover {
+        color: #51bbf1;
+        cursor: pointer;
+        text-decoration: underline; }
+.goods .show-goods .your-cart-goods {
+  display: flex;
+  flex-direction: column; }
+  .goods .show-goods .your-cart-goods .goods-item {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 1rem 0; }
+    .goods .show-goods .your-cart-goods .goods-item > div:not(:nth-of-type(2)) {
+      flex: 2; }
+    .goods .show-goods .your-cart-goods .goods-item > div:nth-of-type(2) {
+      flex: 7; }
+    .goods .show-goods .your-cart-goods .goods-item > div:nth-of-type(1) {
+      flex: 1; }
+
+.col1 {
+  display: flex;
+  align-items: center; }
+  .col1 > input {
+    position: relative;
+    z-index: 2; }
+
+.col2 {
+  display: flex;
+  flex-direction: row; }
+  .col2 img {
+    width: 3.4rem;
+    height: 3.4rem; }
+  .col2 > div {
+    flex: 1;
+    display: flex;
+    margin-left: 1rem;
+    flex-direction: column; }
+    .col2 > div > div:first-child {
+      font-size: .7rem;
+      flex: 2;
+      color: #333; }
+      .col2 > div > div:first-child:hover {
+        color: #e31436;
+        cursor: pointer; }
+    .col2 > div > div {
+      width: 80%; }
+
+.col4 > button, .col4 > input {
+  float: left; }
+.col4 > button {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #bcbcbc;
+  color: #333;
+  text-align: center;
+  background-color: #fff;
+  outline: none; }
+  .col4 > button:hover {
+    cursor: pointer;
+    color: #e31436; }
+.col4 > input {
+  text-align: center;
+  width: 43px;
+  height: 18px;
+  border: 1px solid #bcbcbc;
+  border-left-width: 0;
+  border-right-width: 0;
+  outline: none; }
+  .col4 > input:focus {
+    outline: none; }
+
+.col4, .col5 {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.col6 > p {
+  color: #333; }
+  .col6 > p:hover {
+    cursor: pointer;
+    color: currentColor;
+    text-decoration: underline; }
+
+.vine-line {
+  position: absolute;
+  border-left: 1px dashed #ccc;
+  z-index: 1;
+  height: 108px;
+  left: 11px;
+  top: 0;
+  display: none; }
+
+.active-item {
+  background: #FFFBF0; }
+
+.centerX {
+  text-align: center;
+  justify-content: center; }
+
+.new-checkbox {
+  display: inline-block;
+  width: 17px;
+  height: 18px;
+  background: url(../img/checkboxIcons.png) no-repeat 0 -24px;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.cart-exist {
+  width: 100%; }
+  .cart-exist .mycartBox {
+    width: 85.15625%;
+    margin: 0 auto; }
+    .cart-exist .mycartBox .mycart-short-info {
+      display: flex;
+      margin-bottom: 1rem; }
+      .cart-exist .mycartBox .mycart-short-info > div {
+        color: #999;
+        display: flex;
+        align-items: center; }
+      .cart-exist .mycartBox .mycart-short-info > div:not(:nth-of-type(2)) {
+        flex: 1; }
+      .cart-exist .mycartBox .mycart-short-info > div:nth-of-type(2) {
+        flex: 3; }
+      .cart-exist .mycartBox .mycart-short-info .mycart-btn-allselect label {
+        vertical-align: top;
+        color: #333; }
+    .cart-exist .mycartBox .mycart .goods {
+      border: 1px solid #efefef;
+      margin: 1rem 0 4rem 0; }
+    .cart-exist .mycartBox .totalbox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+
+.btn-selectall {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.totalbox {
+  border: 1px solid #ddd;
+  background-color: #f8f8f8; }
+  .totalbox .totalLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .totalbox .totalLeft > div {
+      margin-right: 1rem; }
+    .totalbox .totalLeft div > label, .totalbox .totalLeft div > a {
+      vertical-align: top; }
+  .totalbox .totalRight {
+    display: flex; }
+    .totalbox .totalRight .total-right-txt {
+      box-sizing: border-box;
+      padding: .5rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: .5rem; }
+      .totalbox .totalRight .total-right-txt > p:first-child {
+        text-align: right;
+        font-size: .7rem; }
+        .totalbox .totalRight .total-right-txt > p:first-child span {
+          font-size: .9rem;
+          font-weight: bold; }
+      .totalbox .totalRight .total-right-txt > p:last-child {
+        color: #999; }
+      .totalbox .totalRight .total-right-txt > p {
+        margin: 0; }
+    .totalbox .totalRight .btn-pay {
+      border: none;
+      outline: none;
+      width: 120px;
+      height: 61px;
+      background-color: #ccc;
+      font-size: .9rem;
+      color: #fff;
+      font-family: '微软雅黑'; }
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-bottom: .25rem; }
+
+.new-price {
+  color: #333;
+  font-weight: bold;
+  font-size: .7rem;
+  margin-top: 0; }
+
+.tax-rule {
+  position: absolute;
+  z-index: 5;
+  background: #fff;
+  display: none; }
+  .tax-rule .tax-content {
+    box-sizing: border-box;
+    padding: 12px;
+    width: 300px;
+    box-shadow: 0 1px 2px 1px #ddd;
+    border: 1px solid #ccc;
+    position: relative; }
+  .tax-rule .tax-triangle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #ddd;
+    transform: translate(-50%, -50%) rotate(45deg); }
+    .tax-rule .tax-triangle:after {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      transform: translate(-50%, 0); }
+
 .cart-exist > div:not(:first-child) {
   margin-bottom: 1rem; }
   .cart-exist > div:not(:first-child) > div {

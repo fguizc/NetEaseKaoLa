@@ -41,6 +41,107 @@ figure{margin: 0}
 
 
 /*当存在商品时的购物车主界面*/
+//加入购物车的商品信息
+.cart-exist{
+  .mycartBox{
+    .mycart{
+      .location-send{
+        >input{vertical-align: bottom;}
+      }
+      .goods{}
+    }
+  }
+}
+.goods{
+  .show-goods{
+    .current-active{position: relative;padding-top: .5rem;
+      .active-pic{position: absolute;left: -1px;background: url(../img/manjianIcons.png) no-repeat -10px -10px;
+                  width: 68px;height: 30px;line-height: 30px;font-size: .7rem;}
+      .active-des{height: 1.5rem;padding-left: 4rem;@include flexCenter;justify-content: flex-start;
+        >p{color: #999;font-size: .7rem;}
+        >a{color: #51bbf1;font-size: .7rem;
+          &:hover{color: #51bbf1;cursor: pointer;text-decoration: underline;}}}
+    }
+    .your-cart-goods{display: flex;flex-direction: column;
+      .goods-item{flex: 1;display: flex;flex-direction: row;position: relative;
+        padding: 1rem 0 ;
+        >div:not(:nth-of-type(2)){flex: 2}
+        >div:nth-of-type(2){flex: 7}
+        >div:nth-of-type(1){flex: 1}}}
+  }
+}
+.col1{display: flex;align-items: center;
+  >input{position: relative;z-index: 2;}}
+.col2{display: flex;flex-direction: row;
+  img{width: 3.4rem;height: 3.4rem;}
+  >div{flex: 1;display: flex;margin-left: 1rem;flex-direction: column;
+    >div:first-child{font-size: .7rem;flex: 2;color: #333;
+      &:hover{color: $hoverColor;cursor:pointer;}}
+    >div{width: 80%;}}}
+.col4{
+  >button,>input{float: left;}
+  >button{display: inline-block;width: 22px;height: 22px;
+        border: 1px solid #bcbcbc;color: #333;
+        text-align: center;background-color: #fff;outline: none;
+        &:hover{cursor: pointer;color: $hoverColor}}
+  >input{text-align: center;width: 43px;height: 18px;border: 1px solid #bcbcbc;
+         border-left-width: 0;border-right-width: 0;outline: none;
+       &:focus{outline: none;}}
+}
+.col4,.col5{@include flexCenter;}
+.col6{>p{color: #333;&:hover{cursor: pointer;color: currentColor;text-decoration: underline;}}}
+.vine-line{position: absolute;border-left: 1px dashed #ccc;
+           z-index: 1;height: 108px;left: 11px;top: 0;display: none;}
+.active-item{background: #FFFBF0;}
+.centerX{text-align: center;justify-content: center;}
+//改变input[checkbox]的样式
+.new-checkbox{display: inline-block;width: 17px;height: 18px;
+              background: url(../img/checkboxIcons.png) no-repeat 0 -24px;
+              outline: none;
+              -webkit-appearance:none;
+              -moz-appearance:none;}
+.cart-exist{width: 100%;
+  .mycartBox{@include centerWidth;
+    .mycart-short-info{display: flex;margin-bottom: 1rem;
+      >div{color: #999;display: flex;align-items: center;}
+      >div:not(:nth-of-type(2)){flex:1}
+      >div:nth-of-type(2){flex:3}
+      .mycart-btn-allselect{label{vertical-align: top;color: #333;}}}
+    .mycart{.goods{border: 1px solid #efefef;margin: 1rem 0 4rem 0;}}
+    .totalbox{display: flex;justify-content: space-between;align-items: center;}}}
+.btn-selectall{@include flexCenter;}
+.totalbox{border: 1px solid #ddd;background-color: #f8f8f8;
+  .totalLeft{@include flexCenter;
+    >div{margin-right: 1rem;}
+    div{
+      >label,>a{vertical-align: top;}}}
+  .totalRight{display: flex;
+    .total-right-txt{box-sizing: border-box;padding: .5rem 0;
+      display: flex;flex-direction: column;
+      justify-content: center;
+      margin-right: .5rem;
+      >p:first-child{text-align: right;font-size: .7rem;span{font-size: .9rem;font-weight: bold;}}
+      >p:last-child{color:#999}
+      >p{margin: 0;}}
+    .btn-pay{border: none;outline: none;width: 120px;height: 61px;
+             background-color: #ccc;font-size: .9rem;color: #fff;
+             font-family: '微软雅黑'}
+  }
+}
+.old-price{text-decoration: line-through;color: #999;margin-bottom: .25rem;}
+.new-price{color: #333;font-weight: bold;font-size: .7rem;margin-top: 0;}
+.tax-rule{position: absolute;z-index: 5;background: #fff;display: none;
+  .tax-content{box-sizing: border-box;padding: 12px;width: 300px;
+    box-shadow: 0 1px 2px 1px #ddd;border: 1px solid #ccc;
+    position: relative;}
+  .tax-triangle{position: absolute;top: 0;left: 50%;width: 10px;
+      height: 10px; background-color: #fff;
+      box-shadow: 0 0 0 2px #ddd;
+      transform: translate(-50%,-50%) rotate(45deg);
+      &:after{position: absolute;top: 0;left: 10px;content: '';width: 20px;
+      height: 20px;background-color: #fff;transform: translate(-50%,0);}}
+}
+//猜你喜欢 + 全网热门推荐
 .cart-exist>div:not(:first-child){
   margin-bottom: 1rem;
   >div{width: 85.15625%;margin: 0 auto;}}
