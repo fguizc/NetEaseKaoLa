@@ -1,0 +1,12 @@
+{
+  "name": "neteasykaola",
+  "version": "1.0.0",
+  "description": "主要用于个人学习html,css,sass,js,jq,webpack,gulp等相关知识建立的练习项目\r 用于了解前端的开发过程以及对项目的实现，了解前端项目打包上线过程",
+  "main": "contentType.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
