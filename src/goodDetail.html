@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>网易考拉海淘-商品详情页</title>
+  <link rel="stylesheet" href="css/index.css" media="screen" title="no title">
+  <link rel="stylesheet" href="css/goodDetail.css" media="screen" title="no title">
+  <link rel="stylesheet" href="demo/dialog.css" media="screen" title="no title">
+  <link rel="stylesheet" href="demo/triangle.css">
+  <link rel ="Shortcut Icon" href=favicon.ico>
+</head>
+<body>
+  <nav class="hd-NavTop">
+    <div class="hd-NavTopL1">
+      考拉欢迎你！
+      <a href="signin.html">登陆</a>
+      <span>|</span>
+      <a href="login.html" target="_blank">免费注册</a>
+    </div>
+    <div class="hd-NavTopL2">
+      <a href="http://app.kaola.com">
+        <i class="icon icon-mobile"></i>手机考拉海淘
+        <span>
+          <img src="img/2dcode-app3.jpg" title="APP QR Code" width="116px" height="116px">
+          <strong>下载APP<br>领1000元新人礼包</strong>
+          <span class="arrowToTop1"></span>
+          <span class="arrowToTop2"></span>
+        </span>
+      </a>
+    </div>
+    <ul class="hd-NavTopR1">
+        <li><a href=""><i class="icon icon-flag"></i>每日签到</a><span>|</span></li>
+        <li><a href="">我的订单</a><span>|</span></li>
+        <li class="have-list">
+          <a href="">个人中心<i class="small-arrow"></i></a>
+          <span>|</span>
+          <div>
+            <a href="#">我的优惠券</a>
+            <a href="#">我的考拉豆</a>
+            <a href="#">账户安全</a>
+            <a href="#">我的实名认证</a>
+            <a href="#">我收藏的商品</a>
+            <a href="#">我关注的商品</a>
+            <a href="#">售后管理</a>
+          </div>
+        </li>
+        <li class="have-list">
+          <a href="">客户服务<i class="small-arrow"></i></a>
+          <span>|</span>
+          <div class="">
+            <a href="#"><i></i>联系客服</a>
+            <a href="#"><i></i>帮助中心</a>
+          </div>
+        </li>
+        <li><a href=""><i class="icon icon-money"></i>游戏充值</a><span>|</span></li>
+        <li><a href="">消费者告知书</a><span>|</span></li>
+        <li class="have-list">
+          <a href="">更多<i class="small-arrow"></i></a>
+          <div>
+            <a href="#">收藏本站</a>
+            <a href="#">新浪微博</a>
+            <a href="#">微信公众号</a>
+            <a href="#">易信公众号</a>
+            <a href="#">招商合作</a>
+            <a href="#">考拉招聘</a>
+          </div>
+        </li>
+    </ul>
+  </nav>
+  <div class="hd-NavBg"></div>
+  <header class="hd-index hd-index-primary-layout">
+    <div class="hd-index-wrap clearfix">
+      <div class="hd-kaolaLogo"><img src="img/kaolaLogo.png" alt="网易考拉海淘"></div>
+      <div class="hd-searchBox">
+        <div class="hd-searchTop">
+          <div class="searchIpt">
+            <i></i>
+            <input type="text" name="name" value="" placeholder="坚果">
+          </div>
+          <div class="searchBigIcon"></div>
+          <div class="searchSmallIcon"></div>
+        </div>
+        <ul class="hd-searchBottom suggestionitems clearfix">
+          <li><a href="#">大王L54</a><span>|</span></li>
+          <li><a href="#">亚瑟士</a><span>|</span></li>
+          <li><a href="#">秋装上新</a><span>|</span></li>
+          <li><a href="#">iphone7</a><span>|</span></li>
+          <li><a href="#">卫生巾</a><span>|</span></li>
+          <li><a href="#">护手霜</a><span>|</span></li>
+          <li><a href="#">男包</a></li>
+        </ul>
+      </div>
+      <div class="hd-shopCart">
+        <i class="icon icon-shopCart-btn"></i>
+        <a href="http://localhost:3000/src/goodShopCart.html">购物车</a>
+      </div>
+    </div>
+  </header>
+  <nav class="hd-NavTab">
+    <div class="topTab clearfix">
+      <div class="allSortGoods">
+        <div class="topLevel">
+          <div class="hideIcon">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <span>所有分类</span>
+
+        </div>
+      </div>
+      <ul class="clearfix funcTab" id="funcTab">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">今日限时购</a></li>
+        <li><a href="#">每日上新</a></li>
+        <li><a href="#">排行榜</a></li>
+        <li><a href="#">国家馆</a></li>
+        <li><a href="#">日本乐天市场</a></li>
+        <li><a href="#">香港莎莎国际美妆</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="m-box">
+    <div class="m-wrap">
+      <div class="m-goods">
+        <div class="m-goods-nav goods-detail-bread-crumbs-nav">
+          <em id="NEkaolaName"><a href="index.html">网易考拉海购</a></em>
+          <span class="right-arrow">&gt;</span>
+          <em id="thisGoodsName" class=""></em>
+        </div>
+        <div class="m-goods-content">
+          <figure class="goods-pic">
+            <div class="goods-bigpic" style="position:relative;">
+              <div id="mouseArea" style="cursor:crosshair;display:none;width:80px;height:80px;position:absolute;background-color:rgba(200, 255, 200, 0.298039)"></div>
+              <img src="img/loading2.gif" alt="">
+              <i class="icon icon-search-plus"></i>
+            </div>
+            <div class="goods-showdetail" style="z-index:100">
+              <img src="img/loading2.gif" alt="" style="position:absolute;width:800px;height:800px;"/>
+            </div>
+            <div class="goods-thumb clearfix">
+              <span class="prev-pic" >&lt;</span>
+              <ul>
+                <li class="active-thumb">
+                  <a href="javascript:">
+                    <img src="img/loading2.gif" alt="">
+                  </a>
+                </li>
+              </ul>
+              <span class="next-pic">&gt;</span>
+            </div>
+          </figure>
+          <article class="goods-txt">
+            <div class="orig-country">
+              <img src="" alt="" width="24px" height="24px">
+              <span class="country"></span>
+              <span>|</span>
+              <span class="brand"></span>
+              <span class="tag-self-employed tag">自营</span>
+              <span class="tag-cross-country tag">跨境</span>
+            </div>
+            <div class="goods-des">
+              <h2 class="goods-name">
+              </h2>
+              <span class="goods-defined">
+              </span>
+            </div>
+            <div class="goods-price">
+              <div class="current-price">
+                <span class="tit-3">售价</span>
+                <em class="hotkey"><span></span></em>
+              </div>
+              <div class="active-promotions outline">
+                <span class="tit-3">促销</span>
+                <span class="active"></span>
+                <span class="active-des"></span>
+              </div>
+            </div>
+            <div class="postage outline">
+              <span class="tit-3">运费</span>
+              <span class="start-location">杭州</span>
+              <span>至</span>
+              <span class="end-location">
+                <select id="s_province" name="s_province"></select>  
+                  <select id="s_city" name="s_city" ></select>  
+                  <select id="s_county" name="s_county"></select>
+                  <!-- 导入js -->
+                  <!-- <script src="js/jquery-1.12.3.js"></script> -->
+                  <script class="resources library" src="js/plug-in/area.js" type="text/javascript"></script>
+                  <script type="text/javascript">_init_area();</script>
+              </span>
+              <span class="free-post">
+                <span>订单实付满88元免运费</span><i class="icon-triangle"></i>
+                <div class="rule-free-post" style="display:none">
+                  自营实付满88元免运费，不足金额的订单收取10元运费，<br>
+                  税费、活动及优惠券不计入88元金额 <br>
+                  部分特殊商品及入驻商家单独计算运费。
+                </div>
+              </span>
+            </div>
+            <div class="service outline">
+              <span class="tit-3">服务</span>
+              <span>本商品由<em>自营杭州保税5号仓</em>发货</span>
+            </div>
+            <div class="taxrate">
+              <span class="tit-3">税费</span>
+              <span class="current-taxrate"></span>
+              <span class="rule-tax">
+                <span>税费收取规则</span>
+                <i></i>
+                <div class="rule-tax-txt" style="display:none">
+                  税费 = 购买单价 * 件数 * 税率<br>
+                  据国家政策规定，本品适用于跨境综合税<br>
+                  注：不同商品的适用税率不同，<a href="javascript:">了解税率</a>
+                </div>
+              </span>
+            </div>
+            <div class="change-num outline" id="btnChangeNum">
+              <span class="tit-3">数量</span>
+              <div class="computed-component">
+                <button class="decrease-num default-button">-</button>
+                <input type="text" class="current-goods-num" value="1">
+                <button class="increase-num">+</button>
+              </div>
+              <span class="stock">库存充足</span>
+            </div>
+            <div class="buyButton outline" id="btnBuyBox">
+              <button id="btnBuy">立即购买</button>
+              <button id="btnAddCart"><i></i>加入购物车</button>
+              <button id="btnCollect"><i class="icon icon-heart-o"></i>收藏</button>
+            </div>
+            <div class="scoreBox outline">
+              <span class="favorable-star">
+                <i class="icon icon-star"></i>
+                <i class="icon icon-star"></i>
+                <i class="icon icon-star"></i>
+                <i class="icon icon-star"></i>
+                <i class="icon icon-star"></i>
+              </span>
+              <span class="favorable-rate hotkey">98%</span>
+              <span class="user-comment"><a href="">1300人</a><span>评价</span></span>
+              <span class="user-share"><a href="">62人</a>晒单</span>
+            </div>
+            <!-- <div class="user-comment outline">
+              just a box
+            </div> -->
+            <!-- 下架标识 -->
+            <div class="outline-show" style="width:658px;height:82px;margin-top:16px;background:url(img/xiajia_e0c184e.jpg) no-repeat;display:none;"></div>
+          </article>
+          <aside class="goods-right-nav aside-right">
+            <div>
+              <i class="icon icon-flag-aside indexRight_checkin"></i>签到
+              <div class="checkin_content">
+                <div class="triangle_1"></div>
+                <div class="triangle_2"></div>
+                <div class="content">
+                  <span>每日签到</span><span>赢考拉豆</span>
+                </div>
+              </div>
+            </div>
+            <div style="position:relative">
+              <a href="http://localhost:3000/src/goodShopCart.html" style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center">
+                <i class="icon icon-shopcart-aside indexRight_cart "></i>
+                购物车
+                <em class="cart-goods-num" id="btnShowCartNum" style="display:none"></em>
+              </a>
+            </div>
+            <div>
+              <i class="icon icon-mobile-aside indexRight_app "></i>APP
+              <div class="appQRcode"></div>
+            </div>
+            <div><i class="indexRight_triangle"></i>TOP</div>
+          </aside>
+        </div>
+      </div>
+      <div class="m-recommend">
+        <div class="tit">
+          <h2>相关推荐</h2>
+          <span class="des">购买了商品的人还买了这些</span>
+        </div>
+        <ul class="content">
+          <li class="recommend-goods"></li>
+          <li class="recommend-goods"></li>
+          <li class="recommend-goods"></li>
+          <li class="recommend-goods"></li>
+          <li class="recommend-goods"></li>
+        </ul>
+      </div>
+      <div class="m-detail">
+        <div class="other-recommend">
+          <ul>
+            <li>看了又看</li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="detailBox">
+          <div class="this-goods-detail">
+            <div class="goods-info"></div>
+            <div class="our-committed">
+              <div class="right-pic">真</div>
+              <div>
+                <h4>假一赔十</h4>
+                <p>
+                  网易考拉海购每一件商品都通过严苛的品质把关，保障正品，保障品质。
+                  特推出 “假一赔十” 的正品保障政策，杜绝一切假货，让您无忧购物。
+                </p>
+              </div>
+            </div>
+            <figure class="detail-picBox">
+              <img src="img/broken.jpg" alt="!图片资源请求超时/地址错误" class="broken-img-alt">
+              <img src="img/broken.jpg" alt="!图片资源请求超时/地址错误" class="broken-img-alt">
+              <img src="img/broken.jpg" alt="!图片资源请求超时/地址错误" class="broken-img-alt">
+              <img src="img/broken.jpg" alt="!图片资源请求超时/地址错误" class="broken-img-alt">
+            </figure>
+
+          </div>
+          <div class="user-commentBox"></div>
+        </div>
+      </div>
+      <div class="m-faq">
+        <h4 class="kaola-faq">FAQ</h4>
+        <ol class="faq-content">
+          <li> 为何商品有从国内保税区发出？有从海外仓库直接发出？</li>
+          <li> 订单什么时候发货？大概多久可以收到商品？ </li>
+          <li> 海关如何收取税费？</li>
+          <li> 是否支持退货？ </li>
+          <li> 为什么要实名认证？</li>
+        </ol>
+        <div class="must-know">
+          <h5>购买须知</h5>
+          <ol>
+            <li>您在本（公司）网站上购买的境外商品，仅限个人自用不得进行再销售。商品本身可能无中文标签，您可以查看网站的翻译或者在线联系我们的客服。</li>
+            <li>您购买的境外商品适用的品质、健康、标识等项目使用标准均按照原产国使用标准（比如本站所销售的欧洲奶粉为欧洲标准，所售美国奶粉为美国标准，所售澳洲奶粉则为澳洲标准），可能与我国标准有所不同，所以在使用过程中产生的危害或损失以及其他风险，将由您个人承担。</li>
+            <li>您在本（公司）网站上购买保税仓发货的境外商品时，自动视为考拉海购代您向海关进行申报和代缴税款。</li>
+          </ol>
+        </div>
+      </div>
+      <div class="m-customertips"></div>
+      <div class="guesslist"></div>
+      <div class="recent-view"></div>
+    </div>
+  </div>
+
+
+  <footer class="ft-Wrap">
+    <div class="ft-aboutKLa">
+      <div class="btmList">
+        <ul>
+          <li class="clearfix">
+            <i></i>
+            <strong class="tit">100%正品</strong>
+            <span class="desc">全球精选 正品保障</span>
+          </li>
+          <li class="clearfix">
+            <i></i>
+            <strong class="tit">低价保障</strong>
+            <span class="desc">缩减中间环节 确保低价</span>
+          </li>
+          <li class="clearfix">
+            <i></i>
+            <strong class="tit">7天无忧退货</strong>
+            <span class="desc">国内退货 售后无忧</span>
+          </li>
+          <li class="clearfix">
+            <i></i>
+            <strong class="tit">实付满88包邮</strong>
+            <span class="desc">部分特殊商品除外</span>
+          </li>
+        </ul>
+      </div>
+      <div class="guideList">
+        <ul class="clearfix">
+          <li class="followUs">
+            <img src="img/kaolaLogo.png" alt="" />
+            <span>
+              关注我们
+              <i class="sns-icon"></i>
+              <i class="sns-icon"></i>
+              <i class="sns-icon"></i>
+            </span>
+          </li>
+          <li>
+            <dl>
+              <dt>考拉保障</dt>
+              <dd>正品保障</dd>
+              <dd>廉正监督</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>新手指南</dt>
+              <dd>购物流程</dd>
+              <dd>支付方式</dd>
+              <dd>通关税费</dd>
+              <dd>常见问题</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>售后服务</dt>
+              <dd>退货政策</dd>
+              <dd>退货流程</dd>
+              <dd>退款说明</dd>
+              <dd>联系客服</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>物流配送</dt>
+              <dd>配送方式</dd>
+              <dd>配送服务</dd>
+              <dd>运费标准</dd>
+              <dd>物流跟踪</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>关于我们</dt>
+              <dd>联系我们</dd>
+              <dd>招商合作</dd>
+              <dd>销售联盟</dd>
+              <dd>CEO邮箱</dd>
+            </dl>
+          </li>
+          <li class="download QRcode">
+            <img src="img/2dcode-app3.jpg" alt="APP Download QR code" />
+            <span>扫描下载手机版</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-aboutNE">
+      <div class="aboutinfo1">
+        <a href="#">About NetEase</a>-
+        <a href="#">公司简介</a>-
+        <a href="#">联系方法</a>-
+        <a href="#">友情链接</a>-
+        <a href="#">招聘信息</a>-
+        <a href="#">客户服务</a>-
+        <a href="#">隐私政策</a>-
+        <a href="#">网络营销</a>-
+        <a href="#">网站地图</a>-
+        <a href="#">网易考拉海购</a>
+      </div>
+      <div class="aboutinfo2">
+        <i><img src="img/f28aa8ee818a42bf832341f605eccefb.png" alt="Police sysmbol of China"></i>
+        <a href="#">浙公网安备 33010002000066号</a>
+        <span >增值电信业务经营许可证 ：浙B2-20090185-3</span>
+        <span >网络文化经营许可证 ：浙网文[2016]0155-055号</span>
+        <span >网易公司版权所有<em>&copy;</em>1997-2016</span>
+      </div>
+      <div class="aboutinfo3">
+        <img src="img/d720d83b55a04b6f932ea845c673c5bf.png" alt="Trusted website in China">
+        <img src="img/db9ba5060e9e49fabf3f6cc4b8b6ccf7.jpg" alt="National Emblem of the People's Republic of China">
+      </div>
+    </div>
+  </footer>
+  <script src="js/vendor/jquery-3.1.0.min.js" charset="utf-8"></script>
+  <script src="js/vendor/jquery.cookie.js" charset="utf-8"></script>
+  <script src="js/plug-in/jquery.fly.min.js" charset="utf-8"></script>
+  <script src="js/plug-in/requestAnimationFrame.js" charset="utf-8"></script>
+  <script src="js/goodDetail.js" charset="utf-8"></script>
+</body>
+</html>

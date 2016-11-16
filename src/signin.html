@@ -7,6 +7,7 @@
   <title>登录-网易考拉海购</title>
   <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/signin.css" media="screen" title="no title" charset="utf-8">
+  <link rel ="Shortcut Icon" href=favicon.ico>
 </head>
 <body>
   <header class="hd-sign">
@@ -15,7 +16,7 @@
       <a href="#"></a>
     </div>
     <div class="hd-sign-sellpoint">
-      <div class="kaolaLogo"></div>
+      <div class="kaolaLogo"><a href="https://github.com/fguizc/NetEaseKaoLa" style="width:100%;height:100%;display:inline-block"></a></div>
       <div class="sellpoint"></div>
     </div>
   </header>
@@ -43,18 +44,18 @@
               </div>
               <a href="#">忘记密码?</a>
             </div>
-            <button class="btn-signin">登录</button>
+            <input type="button" class="btn-signin" value="登录">
           </form>
           <div class="toLogin">
             <span>没有网易邮箱?</span>
-            <span>立即免费注册&gt;&gt;</span>
+            <a href="login.html">立即免费注册&gt;&gt;</a>
           </div>
           <div class="sign-sns">
             <span>使用第三方账号登录：</span>
-            <i class="icon-sns icon-wechat"></i>
-            <i class="icon-sns icon-alipay"></i>
-            <i class="icon-sns icon-weibo"></i>
-            <i class="icon-sns icon-qq"></i>
+            <i class="icon-sns wechat"></i>
+            <i class="icon-sns alipay"></i>
+            <i class="icon-sns weibo"></i>
+            <i class="icon-sns qq"></i>
           </div>
         </div>
         <div class="qrcode">
@@ -88,6 +89,7 @@
     </div>
   </footer>
   <script src="js/vendor/jquery-3.1.0.min.js" charset="utf-8"></script>
+  <script src="js/vendor/jquery.cookie.js" charset="utf-8"></script>
   <script src="js/signin.js" charset="utf-8"></script>
 </body>
 </html>

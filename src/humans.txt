@@ -1,0 +1,30 @@
+/* TEAM */
+author:fguizc
+website:fguizc.xyz
+weibo:http://weibo.com/zsuerpaman/
+github:https://github.com/fguizc/NetEaseKaoLa
+e-mail:zwcsupermanatgmail.com
+
+
+
+/* THANKS */
+
+/* website */
+http://github.com/
+http://www.kaola.com/
+http://study.163.com/
+http://imooc.com/
+http://google.com/
+http://stackoverflow.com/
+http://w3cplus.com/
+
+/* human */
+My friend - Jinsong Wei
+
+
+/* SITE */
+language: zh
+last-update: 2016/10/6
+standard: html,css,scss,js,jquery etc.
+
+just for better me , just for technology.

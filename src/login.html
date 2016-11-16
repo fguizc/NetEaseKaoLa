@@ -7,6 +7,7 @@
   <title>网易用户中心</title>
   <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/login.css" media="screen" title="no title" charset="utf-8">
+  <link rel="Shortcut Icon" href="favicon(1).ico">
 </head>
 <body>
   <header class="hd-logoBox">
@@ -41,16 +42,18 @@
         <div class="test-code">
           <label for="test-code">验证码：</label>
           <div class="bg-code">
-            <img src="img/slider.png" alt="" />
+            <div class="move-div">
+              <img src="img/slider.png" alt="" />
+            </div>
             <span>拖动滑块，完成验证</span>
           </div>
         </div>
         <div class="user-phone">
           <label for="phone-num">手机号：</label>
-          <input type="text" placeholder="11位手机号">
+          <input type="text" placeholder="11位手机号" id="user-phone">
         </div>
-        <div class="switch-internation-num">
-          <a href="#">切换到国际手机</a>
+        <div class="switch-internation-num"  style="width:84px;">
+          <a href="javascript:">切换到国际手机</a>
         </div>
         <div class="phone-help">
           <span>忘记密码时，可通过手机快速找回密码</span>
@@ -85,5 +88,8 @@
     </ul>
     <span>网易公司版权所有 &copy;1997-2016</span>
   </footer>
+  <script src="js/vendor/jquery-3.1.0.min.js" charset="utf-8"></script>
+  <script src="js/vendor/jquery.cookie.js" charset="utf-8"></script>
+  <script src="js/login.js" charset="utf-8"></script>
 </body>
 </html>
