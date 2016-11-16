@@ -1,14 +1,27 @@
+$font: "微软雅黑",Helvetica,Arial,"Hiragino Sans GB" !default;
+$hoverColor: #e31436;
+$defaultFontColor: #666;
+@mixin clearMP{
+    margin: 0 ;
+    padding: 0;}
+html{
+  font-size: 125%;}
+body{
+  font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", 微软雅黑, tahoma, simsun, 宋体;
+  font-size: .6rem;
+  color: $defaultFontColor;
+  overflow-x: hidden;
+  @include clearMP;}
+
 @mixin centerWidth{
-  width: 85.15625%;
+  width: 1090px;
   margin: 0 auto;}
 @mixin abcenter {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate3d(-50%,-50%,0);}
-@mixin clearMP{
-    margin: 0;
-    padding: 0;}
+
 @mixin flexCenter {
     display: flex;
     justify-content: center;
@@ -17,17 +30,132 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;}
-$font: "微软雅黑",Helvetica,Arial,"Hiragino Sans GB" !default;
-$hoverColor: #e31436;
-$defaultFontColor: #666;
-    html{
-      font-size: 125%;}
-    body{
-      font-family: $font;
-      font-size: .6rem;
-      color: #666;
-      overflow-x: hidden;
-      @include clearMP;}
+
+@mixin font-face($font-family,$file-path,$font-weight:normal,$font-style:normal,$asset-pipeline: false){
+        @font-face {
+            font: {
+                family: $font-family;
+                weight: $font-weight;
+                style: $font-style;
+            }
+
+            @if $asset-pipeline == true {
+                src: font-url("#{$file-path}.eot");
+                src: font-url("#{$file-path}.eot?#iefix") format("embedded-opentype"),
+                     font-url("#{$file-path}.woff") format("woff"),
+                     font-url("#{$file-path}.ttf") format("truetype"),
+                     font-url("#{$file-path}.svg##{$font-family}") format("svg");
+            }
+            @else {
+                src: url("#{$file-path}.eot");
+                src: url("#{$file-path}.eot?#iefix") format("embedded-opentype"),
+                     url("#{$file-path}-webfont.woff") format("woff"),
+                     url("#{$file-path}.ttf") format("truetype"),
+                     url("#{$file-path}.svg##{$font-family}") format("svg");
+            }
+        }
+    }
+@include font-face("fontawesome","../css/fonts/font-awesome/fontawesome",normal,$asset-pipeline:false);
+
+// .fa{@include font-face("fontawesome","../css/fonts/font-awesome");}
+$icons: (
+  "copyright" "\f1f9",
+  "flag"      "\f024",
+  "heart-o"   "\f08a",
+  "heart"     "\f004",
+  "shop-cart" "\f07a",
+  "rmb"       "\f157",
+  "angle-right""\f105",
+  "angle-left""\f104",
+  "html5"     "\f13b",
+  "css3"      "\f13c",
+  "github"    "\f09b",
+  "database"  "\f1c0",
+  "picture"   "\f03e",
+  "plus"      "\f067",
+  "minus"     "\f068",
+  "star-o"    "\f006",
+  "star"      "\f005",
+  "mobile"    "\f10b",
+  "thumbs-o-up""\f087",
+  "tags"      "\f02c",
+  "chrome"    "\f268",
+  "firfox"    "\f269",
+  "google"    "\f1a0",
+  "wechat"    "\f1d7",
+  "weibo"     "\f18a",
+  "wikipedia" "\f266",
+  "youtube"   "\f16a",
+  "close"     "\f00d",
+  "code"      "\f121",
+  "question"  "\f29c",
+  "picture-file""\f1c5 ",
+  "search-plus""\f00e",
+  "check-circle""\f058",
+  "edge"      "\f282",
+);
+
+@function match($haystack,$needle){
+    @each $item in $haystack {
+        $index:index($item,$needle);
+        @if $index {
+            $return: if($index == 1, 2, $index);
+            @return nth($item,$return);
+        }
+    }
+    @return false;
+}
+
+@mixin icon($position:"before",$styles:true,$icon:false){
+    //使用伪元素:before 或者:after，默认为:before
+    &:#{$position} {
+        @if $icon {
+            //图标已被指定
+            content: match($icons,$icon);
+        }
+        @if $styles {
+            //通过样式指定图标
+            font: {
+                family: "fontawesome" !important;//@include font-face指定的字体名相同
+                style: normal;
+                weight: normal;
+                variant: normal;
+            }
+            text-transform: none;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+        }
+        //给伪元素添加其他的样式规则
+        @content;
+    }
+}
+
+i[class^=icon]{
+  @include icon ;
+  vertical-align: middle;padding-right: 2px;
+  &:hover{text-decoration: none;}
+}
+// i[class~=icon]::before:hover{color: $hoverColor}
+.icon-mobile{@include icon("before",false,"mobile"){color: $hoverColor;font-size: 16px;};}
+.icon-flag{@include icon("before",false,"flag"){color:$hoverColor;font-size: 14px}}
+.icon-money{@include icon("before",false,"database"){color: $hoverColor;font-size: 13px};}
+.icon-flag-aside{@include icon("before",false,"flag"){font-size: 20px;color: #999;};}
+.icon-mobile-aside{@include icon("before",false,"mobile"){font-size: 30px;color: #999};}
+.icon-shopcart-aside{@include icon("before",false,"shop-cart"){font-size: 20px;color: #999};}
+.icon-shopCart-btn{@include icon("before",false,"shop-cart"){font-size: 16px;color: #999};}
+.icon-angle-left{@include icon("before",false,"angle-left"){font-size: 50px;color: #fff;};}
+.icon-angle-right{@include icon("before",false,"angle-right"){font-size: 50px;color: #fff;};}
+.icon-github{@include icon("before",false,"github"){font-size: 40px;color: #333;};}
+.icon-weibo{@include icon("before",false,"weibo"){font-size: 40px;color: $hoverColor};}
+.icon-heart-o{@include icon("before",false,"heart-o"){font-size: 20px;color: #D22147;&:hover{text-decoration: none;}};}
+.icon-heart{@include icon("before",false,"heart"){font-size: 20px;color: #d22147};}
+.icon-star{@include icon("before",false,"star"){font-size: 11px;color: #d22147;margin-left: 1px;line-height: 19px};}
+.icon-search-plus{@include icon("before",false,"search-plus"){font-size: 20px;color: #999;};}
+@mixin hoverStyle ($fontColor){
+  cursor: pointer;
+  text-decoration: underline;
+  color: $fontColor;}
     a{
       &:hover{color:$hoverColor};
       color: $defaultFontColor;
@@ -43,3 +171,9 @@ $defaultFontColor: #666;
          content: '.';
          height: 0;
          overflow: hidden;}
+
+
+// =========购物车角标===========
+.cart-goods-num{width: 24px;height: 24px;border-radius: 50%;background-color: $hoverColor;font-weight: normal;
+                font-size: 12px;position: absolute;top: -1px;right: -1px;z-index: 5;font-style: normal;
+                color: #fff;text-align: center;line-height: 24px;}

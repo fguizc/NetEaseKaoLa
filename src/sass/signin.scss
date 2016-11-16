@@ -77,26 +77,29 @@
           .usernameBox{.icon-username{background-position: center 9px}}
           .userpassBox{.icon-password{background-position: center -22px}}
           >div+div{margin-top: 16px;}
-          button{width: 270px;height: 44px;
+          input[type='button']{width: 270px;height: 44px;
                 background-color: $hoverColor;
                 color: #fff;
                 text-align: center;
                 line-height: 44px;
                 border: none;
-            &:hover{background-color: #F5345E;}}
+                outline: none;
+                font-family: '微软雅黑';
+            &:hover{background-color: #F5345E;cursor: pointer;}}
         }}
         .toLogin{width: 270px;margin: 0 auto;text-align: center;
                  height: .8rem; line-height: .8rem;font-size: .6rem;
                  margin-top: 1rem;
-          span:last-child{color:#51B8F1;
-            &:hover{cursor: pointer;}}}
+          a:last-child{color:#51B8F1;
+            &:hover{cursor: pointer;text-decoration: underline;}}}
         .sign-sns{height: 22px;padding: 10px 26px 10px 29px;
           border-top: 1px solid #e2e2e2;
           position: absolute;bottom: 0;
           span{color: #333;width: 122px;line-height: 22px;}
           i{background: url(../img/sprite.png) no-repeat;display: inline-block;
             width: 1rem ;height: 1rem;vertical-align: middle;
-            padding: 0 .5rem;}
+            padding: 0 .5rem;
+            &:hover{cursor: pointer;}}
           i:nth-of-type(1){background-position: -38rem -13.8rem;
             &:hover{background-position: -41.2rem -13.8rem}}
           i:nth-of-type(2){background-position: -38rem -15rem;

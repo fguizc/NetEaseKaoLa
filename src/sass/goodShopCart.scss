@@ -21,7 +21,7 @@ figure{margin: 0}
 .m-cart{
   .m-cart-wrap{
     .cart-empty{
-      padding-top: 7.5rem;
+      padding: 7.5rem 0 6rem 0;
       text-align: center;
       height: 7.5rem;
       .empty-txt{vertical-align: top;
@@ -54,7 +54,7 @@ figure{margin: 0}
 }
 .goods{
   .show-goods{
-    .current-active{position: relative;padding-top: .5rem;
+    .current-active{position: relative;padding: .5rem 0;
       .active-pic{position: absolute;left: -1px;background: url(../img/manjianIcons.png) no-repeat -10px -10px;
                   width: 68px;height: 30px;line-height: 30px;font-size: .7rem;}
       .active-des{height: 1.5rem;padding-left: 4rem;@include flexCenter;justify-content: flex-start;
@@ -70,6 +70,7 @@ figure{margin: 0}
         >div:nth-of-type(1){flex: 1}}}
   }
 }
+.col3,.col6{display: flex;flex-direction: column;justify-content: center;}
 .col1{display: flex;align-items: center;
   >input{position: relative;z-index: 2;}}
 .col2{display: flex;flex-direction: row;
@@ -84,12 +85,12 @@ figure{margin: 0}
         border: 1px solid #bcbcbc;color: #333;
         text-align: center;background-color: #fff;outline: none;
         &:hover{cursor: pointer;color: $hoverColor}}
-  >input{text-align: center;width: 43px;height: 18px;border: 1px solid #bcbcbc;
-         border-left-width: 0;border-right-width: 0;outline: none;
+  >input{text-align: center;width: 43px;height: 20px;border: 1px solid #bcbcbc;
+         border-left-width: 0;border-right-width: 0;outline: none;padding: 0;
        &:focus{outline: none;}}
 }
 .col4,.col5{@include flexCenter;}
-.col6{>p{color: #333;&:hover{cursor: pointer;color: currentColor;text-decoration: underline;}}}
+.col6{>p{color: #333;margin:0;&:hover{cursor: pointer;color: currentColor;text-decoration: underline;}}}
 .vine-line{position: absolute;border-left: 1px dashed #ccc;
            z-index: 1;height: 108px;left: 11px;top: 0;display: none;}
 .active-item{background: #FFFBF0;}
@@ -98,10 +99,11 @@ figure{margin: 0}
 .new-checkbox{display: inline-block;width: 17px;height: 18px;
               background: url(../img/checkboxIcons.png) no-repeat 0 -24px;
               outline: none;
-              -webkit-appearance:none;
-              -moz-appearance:none;}
+              // -webkit-appearance:none;
+              // -moz-appearance:none;
+            }
 .cart-exist{width: 100%;
-  .mycartBox{@include centerWidth;
+  .mycartBox{@include centerWidth;margin-bottom: 3.5rem;
     .mycart-short-info{display: flex;margin-bottom: 1rem;
       >div{color: #999;display: flex;align-items: center;}
       >div:not(:nth-of-type(2)){flex:1}
