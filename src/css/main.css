@@ -3,12 +3,112 @@ html {
   font-size: 125%; }
 
 body {
-  font-family: "微软雅黑", Helvetica, Arial, "Hiragino Sans GB";
+  font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", 微软雅黑, tahoma, simsun, 宋体;
   font-size: .6rem;
   color: #666;
   overflow-x: hidden;
   margin: 0;
   padding: 0; }
+
+@font-face {
+  font-family: "fontawesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../css/fonts/font-awesome/fontawesome.eot");
+  src: url("../css/fonts/font-awesome/fontawesome.eot?#iefix") format("embedded-opentype"), url("../css/fonts/font-awesome/fontawesome-webfont.woff") format("woff"), url("../css/fonts/font-awesome/fontawesome.ttf") format("truetype"), url("../css/fonts/font-awesome/fontawesome.svg#fontawesome") format("svg"); }
+i[class^=icon] {
+  vertical-align: middle;
+  padding-right: 2px; }
+  i[class^=icon]:before {
+    font-family: "fontawesome" !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased; }
+  i[class^=icon]:hover {
+    text-decoration: none; }
+
+.icon-mobile:before {
+  content: "";
+  color: #e31436;
+  font-size: 16px; }
+
+.icon-flag:before {
+  content: "";
+  color: #e31436;
+  font-size: 14px; }
+
+.icon-money:before {
+  content: "";
+  color: #e31436;
+  font-size: 13px; }
+
+.icon-flag-aside:before {
+  content: "";
+  font-size: 20px;
+  color: #999; }
+
+.icon-mobile-aside:before {
+  content: "";
+  font-size: 30px;
+  color: #999; }
+
+.icon-shopcart-aside:before {
+  content: "";
+  font-size: 20px;
+  color: #999; }
+
+.icon-shopCart-btn:before {
+  content: "";
+  font-size: 16px;
+  color: #999; }
+
+.icon-angle-left:before {
+  content: "";
+  font-size: 50px;
+  color: #fff; }
+
+.icon-angle-right:before {
+  content: "";
+  font-size: 50px;
+  color: #fff; }
+
+.icon-github:before {
+  content: "";
+  font-size: 40px;
+  color: #333; }
+
+.icon-weibo:before {
+  content: "";
+  font-size: 40px;
+  color: #e31436; }
+
+.icon-heart-o:before {
+  content: "";
+  font-size: 20px;
+  color: #D22147; }
+  .icon-heart-o:before:hover {
+    text-decoration: none; }
+
+.icon-heart:before {
+  content: "";
+  font-size: 20px;
+  color: #d22147; }
+
+.icon-star:before {
+  content: "";
+  font-size: 11px;
+  color: #d22147;
+  margin-left: 1px;
+  line-height: 19px; }
+
+.icon-search-plus:before {
+  content: "";
+  font-size: 20px;
+  color: #999; }
 
 a {
   color: #666;
@@ -33,5 +133,21 @@ em {
   content: '.';
   height: 0;
   overflow: hidden; }
+
+.cart-goods-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e31436;
+  font-weight: normal;
+  font-size: 12px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 5;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  line-height: 24px; }
 
 /*# sourceMappingURL=main.css.map */
